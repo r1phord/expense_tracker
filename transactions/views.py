@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+def index_view(request):
+    return render(request, 'transactions/index.html')
+
 def all_transactions_view(request):
     ...
 
