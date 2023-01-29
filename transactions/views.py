@@ -3,11 +3,23 @@ from django.shortcuts import render
 def index_view(request):
     return render(request, 'transactions/index.html')
 
-def all_transactions_view(request):
-    ...
+def transactions_view(request):
+    return render(request, 'transactions/transactions.html')
 
-def update_transaction_view(request, transaction_id):
-    ...
+def reminders_view(request):
+    return render(request, 'transactions/reminders.html')
 
-def delete_transaction_view(request, transaction_id):
-    ...
+def reports_view(request):
+    return render(request, 'transactions/reports.html')
+
+def budget_view(request):
+    return render(request, 'transactions/budget.html')
+
+def accounts_view(request):
+    return render(request, 'transactions/accounts.html')
+
+def categories_view(request):
+    return render(request, 'transactions/categories.html')
+
+def settings_view(request):
+    return render(request, 'transactions/settings.html')

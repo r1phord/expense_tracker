@@ -13,36 +13,36 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Обзор</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'browse' %}">Обзор</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Транзакции</a>
+                    <a class="nav-link" href="{% url 'transactions' %}">Транзакции</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Планируемые транзакции</a>
+                    <a class="nav-link" href="{% url 'reminders' %}">Планируемые транзакции</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Отчёты</a>
+                    <a class="nav-link" href="{% url 'reports' %}">Отчёты</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Бюджет и цели</a>
+                    <a class="nav-link" href="{% url 'budget' %}">Бюджет и цели</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       ещё
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Счета</a></li>
-                      <li><a class="dropdown-item" href="#">Категории</a></li>
+                      <li><a class="dropdown-item" href="{% url 'accounts' %}">Счета</a></li>
+                      <li><a class="dropdown-item" href="{% url 'categories' %}">Категории</a></li>
                     </ul>
                   </li>
                 </ul>
                 <ul class="navbar-nav d-flex mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Настроки</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'settings' %}">Настройки</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Выход</a>
+                        <button type="button" class="btn btn-dark">Выход</button>
                     </li>
                 </ul>
               </div>
