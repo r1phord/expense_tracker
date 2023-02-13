@@ -1,10 +1,16 @@
 from django.shortcuts import render
 
+from .models import Transaction
+
 def index_view(request):
     return render(request, 'transactions/index.html')
 
 def transactions_view(request):
-    return render(request, 'transactions/transactions.html')
+    transactions = Transaction.objects.all().order_by('-date')
+    context = {
+        'transactions': transactions
+    }
+    return render(request, 'transactions/transactions.html', context=context)
 
 def reminders_view(request):
     return render(request, 'transactions/reminders.html')
