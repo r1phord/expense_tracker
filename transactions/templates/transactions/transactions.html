@@ -1,5 +1,32 @@
 {% extends 'transactions/base.html' %}
 
 {% block content %}
-<h1>Transactions html</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-9 border border-dark">
+            <h1>Транзакции</h1>
+            <div class="">transactionform</div>
+            <div class="row">
+                filter
+            </div>
+        
+
+            <div>
+                {% for transaction in transactions %}
+                    <div class="row">
+                        <div class="col-2">{{ transaction.date }}</div>
+                        <div class="col-4">
+                            <span class="font-weight-bold">{{ transaction.category }}</span>
+                        </div>
+                        <div class="col-3">{{ transaction.amount }}</div>
+                        <div class="col-3">{{ transaction.account }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-3 border border-dark">
+            Summary
+        </div>
+    </div>
+</div>
 {% endblock %}
